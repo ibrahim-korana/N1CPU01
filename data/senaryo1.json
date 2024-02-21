@@ -1,0 +1,20 @@
+{
+    "time": {
+        "start":{
+            "hour":21,
+            "minute":30
+        },
+        "stop":{
+            "hour":21,
+            "minute":40
+        },
+        "days": [0,0,0,0,0,0,0,1]
+    },
+    "functions": [
+        {
+            "name":"lamp1",
+            "act":"off",
+            "pas":"on"
+        }
+    ]
+}

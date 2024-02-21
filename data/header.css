@@ -1,0 +1,20 @@
+.header {
+            padding: 10px 0 0 0;
+            color: black;
+            background-color: white;
+            clear: left;
+            text-align: center;
+       }
+       
+.Tab1 {
+        width:100%;
+        border:none;
+        border-collapse:collapse;
+      }
+.Tab1 td {
+  border:none;
+  text-align:left;
+  vertical-align:center;
+  background: #ffffff;
+  color: #313030;
+}

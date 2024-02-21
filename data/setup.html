@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <meta charset='UTF-8'><meta name='viewport' content='width=1024'><meta name='viewport' content='width=device-width, initial-scale=0.5'>
+    <TITLE>iCe Setup</TITLE><link rel='stylesheet' type='text/css' href='main2.css'>
+  </head>
+  <body>
+    <div class='container' id='container'>   
+     <div id='header' class='header'>
+       <table class='Headt1' border='0'>
+         <tr><td align='left' width='17%'> </td>
+             <td align='left' colspan=5><a><h2>Setup</h2></a>
+         </tr>
+         <tr>
+           <td align='right'><a>Blok NO</a></td>
+           <td align='left'><a>&BNO&</a></td>
+           <td align='right'><a>Daire No</a></td>
+           <td align='left'><a>&DNO&</a></td>
+		   <td align='right'><a>Mac</a></td>
+           <td align='left'><a>&MAC&</a></td>
+		   <td align='right'><a>Res Counter</a></td>
+           <td align='left'><a>&PINGRES&</a></td>
+		   <td align='right'><a>Firmware</a></td>
+           <td align='left'><a>&FVER&</a></td>
+         </tr>  
+       </table>-
+       <hr style='background-color: #11516e; height: 7px;'/>       
+       <form  action='/api/save' method='POST' align='center'> 
+            
+ <table  >
+	<tbody>
+		<tr>
+			<td >
+				<table style="width: 350px; float: left;">
+					<tbody>
+						<tr>
+							<th style="background: #1C6EA4;" colspan="2">Genel</th>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Cihaz Adı</td>
+							<td style="text-align: left;"><input type='text' name='NAME' value='&NAME&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Cihaz ID</td>
+							<td style="text-align: left;"><input type='text' name='DEVID' value='&DEVID&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Lisans</td>
+							<td style="text-align: left;"><input type='text' name='LISANS' value='&LISANS&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Mqtt Server</td>
+							<td style="text-align: left;"><input type='text' name='MQTT' value='&MQTT&'/></td>
+						</tr>						
+						<tr>
+							<td style="text-align: right;">Mqtt Keepalive</td>
+							<td style="text-align: left;"><input type='text' name='KEEP' value='&KEEP&'/></td>
+						</tr>
+						
+						<tr>
+							<td style="text-align: right;">Web Sayfası</td>
+							<td style="text-align: left;"><input type='checkbox' name='WEB' &WEB&/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Tcp Server Start</td>
+							<td style="text-align: left;"><input type='checkbox' name='TCP' &TCP&/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Reset Servisi</td>
+							<td style="text-align: left;"><input type='checkbox' name='RESET' &RESET&/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Random MAC</td>
+							<td style="text-align: left;"><input type='checkbox' name='RANDOM' &RANDOM&/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Time SYNC</td>
+							<td style="text-align: left;"><input type='checkbox' name='SNTP' &SNTP&/></td>
+						</tr>
+						<tr>
+							<th style="background: #1C6EA4;" colspan="2">Daire Numarası/Proje</th>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Blok NO</td>
+							<td style="text-align: left;"><input type='text' name='BNO' value='&BNO&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Daire No</td>
+							<td style="text-align: left;"><input type='text' name='DNO' value='&DNO&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Location</td>
+							<td style="text-align: left;"><input type='text' name='LOC' value='&LOC&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Proje NO</td>
+							<td style="text-align: left;"><input type='text' name='PROJ' value='&PROJ&'/></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</td>
+			<th>
+				<table style="width: 350px;">
+					<tbody>
+						<tr>
+							<th style="background: #1C6EA4;" colspan="2">Wan</th>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Wan Cikis Bicimi</td>
+							<td style="text-align: left;"> 
+							   <label><input type='radio' name='OUT' value='1' onclick="handleWanRadioChange(1)" &OUT1& />Ethernet</label><br/>
+		                       <label><input type='radio' name='OUT' value='2' onclick="handleWanRadioChange(1)" &OUT2& />Wireless AP</label><br/>
+							   <label><input type='radio' name='OUT' value='3' onclick="handleWanRadioChange(0)" &OUT3& />Wireless STA</label><br/>
+							</td>
+						</tr>
+						<tr>
+							<th style="background: #1C6EA4;" colspan="2">IP</th>
+						</tr>
+						<tr>
+							<td style="text-align: right;">IP Alma Şekli</td>
+							<td style="text-align: left;">
+							   <label><input type='radio' name='GETIP' value='1' onclick="handleIpRadioChange(0)" &GETIP1& />Statik</label><br/>
+		                       <label><input type='radio' name='GETIP' value='2' onclick="handleIpRadioChange(1)" &GETIP2& />Dinamik</label><br/>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Ip</td>
+							<td style="text-align: left;"><input type='text' name='IP' value='&IP&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Netmask</td>
+							<td style="text-align: left;"><input type='text' name='NETMASK' value='&NETMASK&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Gateway</td>
+							<td style="text-align: left;"><input type='text' name='GATEWAY' value='&GATEWAY&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Dns</td>
+							<td style="text-align: left;"><input type='text' name='DNS' value='&DNS&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Backup Dns</td>
+							<td style="text-align: left;"><input type='text' name='BDNS' value='&BDNS&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Console IP</td>
+							<td style="text-align: left;"><input type='text' name='CONIP' value='&CONIP&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Ping Time</td>
+							<td style="text-align: left;"><input type='text' name='PINGTM' value='&PINGTM&'/></td>
+						</tr>
+
+						<tr>
+							<td style="text-align: right;">Update Server</td>
+							<td style="text-align: left;"><input type='text' name='UPSER' value='&UPSER&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">Upgrade</td>
+							<td style="text-align: left;"><input type='checkbox' name='UP' &UPGRADE&/></td>
+						</tr>
+
+						<tr>
+							<th style="background: #1C6EA4;" colspan="2">Wifi</th>
+						</tr>
+						<tr>
+							<td style="text-align: right;">ssid</td>
+							<td style="text-align: left;"><input type='text' name='SSID' value='&SSID&'/></td>
+						</tr>
+						<tr>
+							<td style="text-align: right;">password</td>
+							<td style="text-align: left;"><input type='text' name='PASS' value='&PASS&'/></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</th>
+		</tr>
+		
+	<tr>
+      <td colspan=2><input style='height:50px; width:100%' type='submit' value='SAVE AND RESET'</input></td>
+      </form>	
+    </tr>
+    
+    <tr>
+	   <form action='/api/default' method='POST' align='center'>	  
+	   <td colspan=2><input style='height:50px; width:100%' type='submit' value='DEFAULT RESET'</input></td>
+	   </form>
+	</tr>
+	<tr>
+	  <td colspan='2' align='center'><a href='/'>MAIN PAGE</a> </td>
+    </tr>
+	<script>
+		function handleIpRadioChange(radioValue) {
+			var inputElements = document.querySelectorAll('input[type="text"]');
+			if (radioValue == 1){
+				/*for (var i = 7; i < inputElements.length - 2; i++) {
+					inputElements[i].disabled = radioValue === '1';
+				}*/
+				inputElements[7].disabled = true;
+				inputElements[8].disabled = true;
+				inputElements[9].disabled = true;
+			}
+
+			if(!radioValue){
+				inputElements[7].disabled = false;
+				inputElements[8].disabled = false;
+				inputElements[9].disabled = false;
+			}
+
+		}
+
+		function handleWanRadioChange(radioValue) {
+			var inputElements = document.querySelectorAll('input[type="text"]');
+			if (radioValue == 1){
+				inputElements[10].disabled = true;
+				inputElements[11].disabled = true;
+			}
+
+			if(!radioValue){
+				inputElements[10].disabled = false;
+				inputElements[11].disabled = false;
+			}
+
+		}
+	</script>
+	
+		
+	</tbody>
+</table>
+       
+</html>  

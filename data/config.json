@@ -1,0 +1,121 @@
+{
+    "devices":"Ice_ExBox",
+    "functions": [
+        {
+            "name":"air",
+            "uname":"termostat1",
+            "id": 1,
+            "timer": 0,
+            "loc": 0,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 1,"pcf":1, "name":"KOLLEKTOR1", "type":"PORT_OUTPORT"},
+                    {"pin": 0, "name":"TEMP01", "type":"PORT_VIRTUAL"}
+                ]
+            }
+        },
+        {
+            "name":"lamp",
+            "uname":"lamba",
+            "id": 2,
+            "timer": 0,
+            "loc": 0,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 2,"pcf":1, "name":"LAMBA", "type":"PORT_OUTPORT"},
+                    {"pin": 1, "pcf":1, "name":"ANAHTAR", "type":"PORT_INPULS"}
+                ]
+            }
+        },
+
+        {
+            "name":"mwater",
+            "uname":"soguk su",
+            "id": 3,
+            "timer": 10,
+            "loc": 0,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 3, "pcf":1, "name":"ON","type":"PORT_OUTPORT"},
+                    {"pin": 4, "pcf":1, "name":"OFF","type":"PORT_OUTPORT"}
+                ]
+            }
+        },
+
+        {
+            "name":"mwater",
+            "uname":"sicak su",
+            "id": 4,
+            "timer": 10,
+            "loc": 0,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 5, "pcf":1, "name":"ON","type":"PORT_OUTPORT"},
+                    {"pin": 6, "pcf":1, "name":"OFF","type":"PORT_OUTPORT"}
+                ]
+            }
+        },
+
+        {
+            "name":"cont",
+            "uname":"kontaktor",
+            "id": 5,
+            "loc": 1,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 8, "pcf":1, "name":"Kontaktor","type":"PORT_OUTPORT"}
+                ]
+            }
+        },
+
+        {
+            "name":"tmrelay",
+            "uname":"timer_relay",
+            "id": 6,
+            "loc": 1,
+            "timer": 60,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 7, "pcf":1, "name":"tm_role","type":"PORT_OUTPORT", "reverse":1}
+                ]
+            }
+        },
+        
+        {
+            "name":"sec",
+            "uname":"guvenlik",
+            "id": 7,
+            "loc": 0,
+            "timer": 10,
+            "hardware": {
+                "location" : "local",
+                "port": [                    
+                    {"pin": 36, "name":"Water","type":"PORT_WATER", "reverse":1},
+                    {"pin": 1, "pcf":1, "name":"Hareket","type":"PORT_INPORT"}, 
+                    {"pin": 2, "pcf":1, "name":"Enerji","type":"PORT_INPORT"}                  
+                ]              
+            }
+        },
+        
+        {
+            "name":"elev",
+            "uname":"asansor",
+            "id": 9,
+            "loc": 0,
+            "timer": 3,
+            "hardware": {
+                "location" : "local",
+                "port": [
+                    {"pin": 9, "pcf":1, "name":"role","type":"PORT_OUTPORT"}
+                ]
+            }
+        }
+
+    ]
+}

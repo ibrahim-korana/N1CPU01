@@ -1,0 +1,16 @@
+description: "Home for ESP32, ESP32-S and ESP32-C series of SoCs"
+url: "https://github.com/home"
+targets:
+  - esp32
+  - esp32s2
+  - esp32s3
+  - esp32c3
+tags:
+  - home
+files:
+  include:
+    - "library/**/*"
+    - "CMakeLists.txt"
+    - "Kconfig.projbuild"
+  exclude:
+    - "**/*"

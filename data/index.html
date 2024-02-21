@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <TITLE>iCe</TITLE>
+    
+    <style>
+.header {
+            padding: 10px 0 0 0;
+            color: black;
+            background-color: white;
+            clear: left;
+            text-align: center;
+       }
+    
+    
+     .article {    
+    margin-left: 0;
+        background-color: white;
+        padding: 1em;
+        overflow: hidden;
+       }
+     
+    .MenuBtn {
+                background-color: #11516e; 
+        border: none;
+        color: white;
+        padding: 1px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width:220px;
+                height:30px;
+                text-align: left;
+                font-size : 16px;
+        }   
+        .MenuBtn:hover {
+            background-color: #1100FF;
+            color: white;
+        }   
+
+nav {
+    float: left;
+    max-width: 220px;
+    margin: 0;
+    padding: 1em;
+    background-color: white;
+    }
+
+    nav ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0 0 0 0;
+         width: 220px;
+             display: block;
+           }
+
+    nav ul a {
+        display: block;
+        color: white;
+        padding: 1px 1px;
+        text-decoration: none;
+        background-color: maroon;
+             }
+
+.article1 {    
+    margin-left: 222px;
+        background-color: white;
+        padding: 1em;
+        overflow: hidden;
+       }    
+.table, th, td {
+  border: 0px solid black; 
+  padding: 5px;
+}
+.table {
+  border-spacing: 15px;
+}          
+    </style>
+  </head>
+  <body>
+  <div class="container" id="container">  
+  <div id="header" class="header">
+     <table class="Headt1" border="0">
+    <tr>
+        <td align="left" width="17%"><a href="http://icetr.com"><img src="ice.png"></a>  </td>
+        <td align="left" colspan=5> <a><h3>iCe<br>Ayar ve Yonetim<br>Sayfasi</h3></a></td>
+    </tr>
+    </table>
+    <hr style="background-color: #11516e; height: 7px;"  />
+  
+  </div> 
+<form  method='POST'>
+  <nav>                  
+  <ul>
+    <li><input type="submit" class="MenuBtn"  value="Ayarlar" formaction="setup.html"/> </li>
+    <li><input type="submit" class="MenuBtn"  value="Upload" formaction="upload.html"/> </li>
+  </ul>  
+ </nav>
+ </form>
+  </body>
+</html>

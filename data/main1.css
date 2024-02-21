@@ -1,0 +1,44 @@
+.header {
+            padding: 10px 0 0 0;
+            color: black;
+            background-color: white;
+            clear: left;
+            text-align: center;
+       }
+#red {
+                              background: red;
+                              border: solid 1px #82CFD0;
+                              border-radius: 8px;
+                              height: 7px;
+                              width: 356px;
+                              outline: none;
+                              transition: background 450ms ease-in;
+                              -webkit-appearance: none;
+                            }
+                        #green {
+                              background: green;
+                              border: solid 1px #82CFD0;
+                              border-radius: 8px;
+                              height: 7px;
+                              width: 356px;
+                              outline: none;
+                              transition: background 450ms ease-in;
+                              -webkit-appearance: none;
+                            }
+                        #blue {
+                              background: blue;
+                              border: solid 1px #82CFD0;
+                              border-radius: 8px;
+                              height: 7px;
+                              width: 356px;
+                              outline: none;
+                              transition: background 450ms ease-in;
+                              -webkit-appearance: none;
+                            }                
+.table, th, td {
+  border: 0px solid black; 
+  padding: 5px;
+}
+.table {
+  border-spacing: 15px;
+}       
