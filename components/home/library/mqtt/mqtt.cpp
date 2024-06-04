@@ -187,6 +187,9 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
           cJSON_AddStringToObject(rt1, "com", "will");
           cJSON_AddStringToObject(rt1, "status", "on");
           cJSON_AddNumberToObject(rt1, "location", self->mConfig.location);
+          cJSON_AddNumberToObject(rt1, "blok", self->mConfig.blok);
+          cJSON_AddNumberToObject(rt1, "daire", self->mConfig.daire);
+          cJSON_AddNumberToObject(rt1, "proje", self->mConfig.project_id);
 
             time_t now;
             struct tm tt0;

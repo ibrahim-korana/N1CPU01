@@ -52,7 +52,7 @@ void intro_olustur()
 
 void uart_callback(char *data)
 {  
-  uint8_t sender = 254;
+    uint8_t sender = 254;
     cpu2_reset_counter = 0;
    
     bool n_mqtt = true;

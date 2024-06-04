@@ -43,9 +43,6 @@
 #include "lib/senaryo/senaryo.h"
 #include "ping.h"
 
-
-
-
 static const char *TAG = "ANAKUTU_CPU1";
 #define GLOBAL_FILE "/config/global.bin"
 #define NETWORK_FILE "/config/network.bin"
@@ -683,7 +680,7 @@ void global_default_config(void)
      strcpy((char*)GlobalConfig.device_name, "ICE_Main_Box");
      
      strcpy((char*)GlobalConfig.mqtt_server,"icemqtt.com.tr");
-     strcpy((char*)GlobalConfig.license, "02.02.6579C727.F99D");
+     strcpy((char*)GlobalConfig.license, "02.02.6579C727.F91D");
      GlobalConfig.device_id = 1;
      GlobalConfig.mqtt_keepalive = 60; 
      GlobalConfig.reset_servisi = 0; 
